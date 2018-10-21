@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>绝对定位+transform反向偏移</title>
+	<style type="text/css">
+		*{margin: 0;padding: 0;border:0;}
+		h3{text-align: center;margin:15px 0;}
+		ol{list-style: none;}
+		.wrap{width: 100%;height: calc(100vh - 56px);background-color: #f0f0f0;position: relative;}
+		.content{width:50%;height:400px;background-color: #fff;margin:auto;position:absolute;left: 50%;top: 50%;-webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);}
+		.tip{font-weight: bold;font-size: 14px;margin-top: 10px;}
+	</style>
+</head>
+<body>
+	<h3>「绝对定位+transform反向偏移」垂直水平居中</h3>
+	<div class="wrap">
+		<div class="content">
+			<h4>主要代码：</h4>
+			<ol>
+				<li>1.父元素:position:relative;</li>
+				<li>2.子元素:height:100px;width:100px;position:absolute;top:50%;left:50%;-webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);</li>
+			</ol>
+			<p></p>
+			<h4>原理：</h4>
+			<p>
+				该原理和margin反向偏移是一个道理，用transform代替了margin
+			</p>
+			<p class="tip">tip：兼容性最好，但是比较局限，需要设置元素的宽度和高度，同时兼容性不是很高</p>
+		</div>
+	</div>
+</body>
+</html>

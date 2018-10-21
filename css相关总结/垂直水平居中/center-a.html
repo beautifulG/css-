@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>绝对定位+margin：auto</title>
+	<style type="text/css">
+		*{margin: 0;padding: 0;border:0;}
+		h3{text-align: center;margin:15px 0;}
+		ol{list-style: none;}
+		.wrap{width: 100%;height: calc(100vh - 56px);background-color: #f0f0f0;position: relative;}
+		.content{width:50%;height:50%;background-color: #fff;margin:auto;position: absolute;top: 0;right: 50px;bottom: 0;left: 50px;}
+		.bold{font-weight: bold;font-size: 14px;}
+	</style>
+</head>
+<body>
+	<h3>「绝对定位+margin：auto」垂直水平居中</h3>
+	<div class="wrap">
+		<div class="content">
+			<h4>主要代码：</h4>
+			<ol>
+				<li>1.父元素:position:relative;</li>
+				<li>2.子元素:position:absolute;top:0;right:0;bottom:0;left:0;margin:auot</li>
+			</ol>
+			<p></p>
+			<h4>原理：</h4>
+			<p>
+				在content同时设置left和right并且未定义width时，会自动撑开content直至left达到设置的值为止，此时会达到居中的效果；如果设置了content的宽度，未设置margin:auto，content的宽度无法满足宽度，所以会以left为基准；如果设置了margin:auto，页面会自动计算剩余的宽度并平分，使得content居中；
+			</p>
+		</div>
+	</div>
+</body>
+</html>

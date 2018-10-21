@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>display: flex-box</title>
+	<style type="text/css">
+		*{margin: 0;padding: 0;border:0;}
+		h3{text-align: center;margin:15px 0;}
+		ol{list-style: none;}
+		.wrap{ display: -webkit-flex;
+			    display: -moz-box;
+			    display: -ms-flexbox;
+			    display: -webkit-box;
+			    display: flex;
+			    -webkit-box-align: center;
+			    -moz-box-align: center;
+			    -ms-flex-align: center;
+			    -webkit-align-items: center;
+			    align-items: center;
+			    -webkit-box-pack: center;
+			    -moz-box-pack: center;
+			    -ms-flex-pack: center;
+			    -webkit-justify-content: center;
+    			justify-content: center;
+    			background-color: #f0f0f0;
+    			width: 100%;
+    			height: calc(100vh - 56px);
+    			background-color: #f0f0f0;
+    		}
+		.content{width:50%;height:50%;background-color: #fff;}
+		.bold{font-weight: bold;font-size: 14px;}
+	</style>
+</head>
+<body>
+	<h3>「display: flex-box」垂直水平居中</h3>
+	<div class="wrap">
+		<div class="content">
+			<h4>主要代码：</h4>
+			<ol>
+				<li>父级元素:display:flex-box;box-align:center;align-items:center;box-pack:center;justify-content:center;</li>
+			</ol>
+			<p></p>
+			<h4>原理：</h4>
+			<p>
+				 flexbox布局。此乃布局终极大法，专治各种布局定位难题！优点：能解决各种排列布局问题，实现方式符合人类认知。缺点：PC端某些旧浏览器支持度不高。
+			</p>
+		</div>
+	</div>
+</body>
